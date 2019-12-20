@@ -1,19 +1,25 @@
 ﻿using System;
+using Assets.Code.Core;
+using Assets.Code.Extensions;
+using Thelania.Core.Aspects;
 
 namespace Thelania.Units
 {
     public abstract class UnitFactoryBase : IUnitFactory
     {
-        public int Level { get; private set; }
+        private readonly AspectsContainer _aspects = new AspectsContainer();
+
+        public int Level => _aspects.Get<ICanUpgrade>().Level;
 
         protected UnitFactoryBase(int level)
         {
-            Level = level;
+            level.AssertGreaterThan(0);
+            _aspects.Add<ICanUpgrade>(new CanUpgradeAspect(level));
         }
 
         public void Upgrade()
         {
-            Level++;
+            _aspects.Get<ICanUpgrade>().Upgrade();
         }
 
         public UnitBase Spawn()

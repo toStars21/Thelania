@@ -1,6 +1,8 @@
-﻿namespace Assets.Code.Core
+﻿using Thelania.Core;
+
+namespace Assets.Code.Core
 {
-    public interface ICanUpgrade
+    public interface ICanUpgrade : IAspect
     {
         int Level { get; }
         void Upgrade();
