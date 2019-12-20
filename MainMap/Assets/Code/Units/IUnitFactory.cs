@@ -1,10 +1,7 @@
-﻿using Assets.Code.Core;
-using Thelania.Core;
-
-namespace Thelania.Units
+﻿namespace Thelania.Units
 {
-    public interface IUnitFactory : ICanUpgrade
+    public interface IUnitFactory
     {
-        UnitBase Spawn();
+        UnitBase Spawn(int level);
     }
 }

@@ -2,13 +2,9 @@
 {
     public class ArcherFactory : UnitFactoryBase
     {
-        public ArcherFactory(int level) : base(level)
+        protected override UnitBase SpawnInternal(int level)
         {
-        }
-
-        protected override UnitBase SpawnInternal()
-        {
-            return new Archer(Level);
+            return new Archer(level);
         }
     }
 }
