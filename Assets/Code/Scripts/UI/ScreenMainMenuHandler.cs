@@ -27,11 +27,11 @@ public class ScreenMainMenuHandler : MonoBehaviour
 
     private void ProcessStartGameButtonClick()
     {
-
+        gameObject.SetActive(false);
     }
 
     private void ProcessExitGameButtonClick()
     {
-
+        Application.Quit();
     }
 }

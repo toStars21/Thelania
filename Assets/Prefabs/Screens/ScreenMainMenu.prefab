@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 5249268307963894139}
   - component: {fileID: 5249268307963894136}
   m_Layer: 5
-  m_Name: ButtonStart
+  m_Name: ButtonExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -573,8 +573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a02c7eb2a0c044596af7d422c1c4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartGameButton: {fileID: 5249268307963894142}
-  ExitGameButton: {fileID: 5249268308364828551}
+  StartGameButton: {fileID: 5249268308364828551}
+  ExitGameButton: {fileID: 5249268307963894142}
 --- !u!1 &5249268308364828551
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 5249268308364828544}
   - component: {fileID: 5249268308364828545}
   m_Layer: 5
-  m_Name: ButtonExit
+  m_Name: ButtonStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
