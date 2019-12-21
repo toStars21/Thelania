@@ -20,7 +20,7 @@ namespace Assets.Code.Scripts.Units
             attackPower.AssertGreaterThan(0);
             attacksInterval.AssertGreaterThan(TimeSpan.Zero);
 
-            _aspects.Add<IKillable>(new KillableAspect(hp));
+            _aspects.Add<IKillable>(new KillableAspect(hp, () => Destroy(gameObject)));
             _aspects.Add<ICanAttack>(new CanAttackAspect(attackDistance, attackPower, attacksInterval));
             _aspects.Add<ICanUpgrade>(new CanUpgradeAspect(level));
         }

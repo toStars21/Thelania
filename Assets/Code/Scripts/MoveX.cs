@@ -6,6 +6,6 @@ public class MoveX : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(transform.position.x - (10 * Time.deltaTime), transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x - 5, transform.position.y, transform.position.z);
     }
 }

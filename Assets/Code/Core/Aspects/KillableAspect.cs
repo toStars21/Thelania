@@ -1,15 +1,18 @@
-﻿using Assets.Code.Extensions;
+﻿using System;
+using Assets.Code.Extensions;
 
 namespace Thelania.Core.Aspects
 {
     public class KillableAspect : IAspect, IKillable
     {
+        private Action _onDestroy;
         public double HP { get; private set; }
 
-        public KillableAspect(double hp)
+        public KillableAspect(double hp, Action onDestroy)
         {
             hp.AssertGreaterThan(0);
 
+            _onDestroy = onDestroy ?? throw new ArgumentNullException(nameof(onDestroy));
             HP = hp;
         }
 
@@ -17,6 +20,11 @@ namespace Thelania.Core.Aspects
         {
             value.AssertGreaterThan(0);
             HP -= value;
+
+            if (HP <= 0)
+            {
+                _onDestroy();
+            }
         }
     }
 }
