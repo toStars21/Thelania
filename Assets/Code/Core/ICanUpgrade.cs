@@ -1,6 +1,4 @@
-﻿using Thelania.Core;
-
-namespace Assets.Code.Core
+﻿namespace Assets.Code.Core
 {
     public interface ICanUpgrade : IAspect
     {

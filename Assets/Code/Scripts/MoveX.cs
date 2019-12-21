@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 
-public class MoveX : MonoBehaviour
+namespace Assets.Code.Scripts
 {
-    public Transform transform;
-
-    void Update()
+    public class MoveX : MonoBehaviour
     {
-        transform.position = new Vector3(transform.position.x - 5, transform.position.y, transform.position.z);
+        public Transform transform;
+
+        void Update()
+        {
+            transform.position = new Vector3(transform.position.x - 5, transform.position.y, transform.position.z);
+        }
     }
 }

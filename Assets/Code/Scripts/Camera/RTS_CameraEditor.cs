@@ -1,8 +1,8 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEditor;
+using UnityEngine;
 
-namespace RTS_Cam
+namespace Assets.Code.Scripts.Camera
 {
     [CustomEditor(typeof(RTS_Camera))]
     public class RTS_CameraEditor : Editor
