@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Thelania.Core;
 
 namespace Assets.Code.Core
@@ -28,5 +29,7 @@ namespace Assets.Code.Core
         {
             _aspects.Remove(typeof(TAspect));
         }
+
+        public IReadOnlyCollection<IAspect> Aspects => _aspects.Values.ToList();
     }
 }
