@@ -1,7 +1,6 @@
-﻿using Assets.Code.Core;
-using Assets.Code.Extensions;
+﻿using Assets.Code.Extensions;
 
-namespace Thelania.Core.Aspects
+namespace Assets.Code.Core.Aspects
 {
     public class CanUpgradeAspect : IAspect, ICanUpgrade
     {

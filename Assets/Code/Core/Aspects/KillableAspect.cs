@@ -1,7 +1,7 @@
 ﻿using System;
 using Assets.Code.Extensions;
 
-namespace Thelania.Core.Aspects
+namespace Assets.Code.Core.Aspects
 {
     public class KillableAspect : IAspect, IKillable
     {

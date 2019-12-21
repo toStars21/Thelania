@@ -1,8 +1,8 @@
-﻿using Assets.Code.Scripts.Core;
-using Thelania.Core;
-using Thelania.Core.Aspects;
+﻿using Assets.Code.Core;
+using Assets.Code.Core.Aspects;
+using Assets.Code.Scripts.Core;
 
-namespace Assets.Code.Scripts.Units
+namespace Assets.Code.Scripts.Buildings
 {
     public abstract class BuildingBase : EntityBase
     {
