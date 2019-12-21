@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace Assets.Code.Scripts.Units
 {
-    public abstract class UnitFactoryBase<TUnit> : MonoBehaviour where TUnit : UnitBase
+    public abstract class UnitFactoryBase : MonoBehaviour
     {
         private readonly float _spawnIntervalSeconds;
 
         private float _nextSpawnTime = 0f;
 
-        public TUnit prototype;
+        public GameObject prototype;
 
         protected UnitFactoryBase(float spawnIntervalSeconds)
         {

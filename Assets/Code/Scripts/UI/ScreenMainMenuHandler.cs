@@ -5,10 +5,10 @@ using UnityEngine.UI;
 public class ScreenMainMenuHandler : MonoBehaviour
 {
     [SerializeField]
-    public GameObject StartGameButton;
+    public GameObject startGameButton;
 
     [SerializeField]
-    public GameObject ExitGameButton;
+    public GameObject exitGameButton;
 
     private Button _startButtonComponent;
     private Button _exitButtonComponent;
@@ -16,9 +16,9 @@ public class ScreenMainMenuHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var startButtonComponent = StartGameButton.GetComponent<Button>();
+        var startButtonComponent = startGameButton.GetComponent<Button>();
         _startButtonComponent = startButtonComponent ?? throw new ArgumentException("Passed GameObject without button component");
-        var exitButtonComponent = ExitGameButton.GetComponent<Button>();
+        var exitButtonComponent = exitGameButton.GetComponent<Button>();
         _exitButtonComponent = exitButtonComponent ?? throw new ArgumentException("Passed GameObject without button component");
 
         _startButtonComponent.onClick.AddListener(ProcessStartGameButtonClick);
