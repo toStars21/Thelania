@@ -26,7 +26,7 @@ namespace Assets.Code.Scripts.Units
         {
             if (Time.time > _nextSpawnTime)
             {
-                Instantiate(prototype, transform);
+                Instantiate(prototype, transform.position, transform.rotation);
                 _nextSpawnTime += _spawnIntervalSeconds;
             }
         }
