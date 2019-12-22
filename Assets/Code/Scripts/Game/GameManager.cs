@@ -7,6 +7,7 @@ namespace Assets.Code.Scripts.Game
     internal class GameManager : MonoBehaviour
     {
         [SerializeField] public GameObject gameMap;
+        [SerializeField] public GameObject village;
 
         private GameObject _currentGameMap;
         private RTS_Camera _camera;
@@ -48,6 +49,11 @@ namespace Assets.Code.Scripts.Game
             }
 
             return terrainComponent.terrainData.size;
+        }
+
+        private void SpawnVillages()
+        {
+
         }
     }
 }

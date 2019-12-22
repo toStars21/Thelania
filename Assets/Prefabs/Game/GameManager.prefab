@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameMap: {fileID: 2710933115867390239, guid: ec366ff475d9ec146b4eb51a4d0d7557, type: 3}
+  village: {fileID: 7416099050666019303, guid: 62b9abcb598196045a6d40710315bc59, type: 3}
