@@ -6,15 +6,16 @@ namespace Assets.Code.Scripts.Game
 {
     internal class GameManager : MonoBehaviour
     {
-        [SerializeField] public GameObject gameMap;
-        [SerializeField] public GameObject village;
+        [SerializeField] private GameMap gameMap;
+        [SerializeField] private GameObject village;
 
-        private GameObject _currentGameMap;
+        private GameMap _currentGameMap;
         private RTS_Camera _camera;
 
         private void Start()
         {
             _currentGameMap = Instantiate(gameMap, transform);
+
             var cameraGameObject = GameObject.FindWithTag("MainCamera");
             _camera = cameraGameObject.GetComponent<RTS_Camera>();
             if (_camera == null)
@@ -23,6 +24,15 @@ namespace Assets.Code.Scripts.Game
                 throw new NullReferenceException();
             }
             SetCameraProperties();
+            SpawnVillages();
+        }
+
+        private void SpawnVillages()
+        {
+            foreach (var spawnPosition in _currentGameMap.villageSpawnPositions)
+            {
+                Instantiate(village, spawnPosition.position, spawnPosition.rotation);
+            }
         }
 
         private void Update()
@@ -41,6 +51,11 @@ namespace Assets.Code.Scripts.Game
 
         private Vector3 GetMapSize()
         {
+            return GetTerrainComponent().terrainData.size;
+        }
+
+        private Terrain GetTerrainComponent()
+        {
             var terrainComponent = _currentGameMap.GetComponentInChildren(typeof(Terrain)) as Terrain;
             if (terrainComponent == null)
             {
@@ -48,12 +63,7 @@ namespace Assets.Code.Scripts.Game
                 throw new NullReferenceException();
             }
 
-            return terrainComponent.terrainData.size;
-        }
-
-        private void SpawnVillages()
-        {
-
+            return terrainComponent;
         }
     }
 }
