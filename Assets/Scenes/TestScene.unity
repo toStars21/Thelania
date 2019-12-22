@@ -96,7 +96,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -177,16 +176,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameMap
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992210404549912808, guid: ec366ff475d9ec146b4eb51a4d0d7557,
-        type: 3}
-      propertyPath: m_LightProbeUsage
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992210404549912808, guid: ec366ff475d9ec146b4eb51a4d0d7557,
-        type: 3}
-      propertyPath: m_ReflectionProbeUsage
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6542151464543719860, guid: ec366ff475d9ec146b4eb51a4d0d7557,
         type: 3}
