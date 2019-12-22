@@ -1,4 +1,5 @@
 ﻿using System;
+using Assets.Code.Scripts.Game;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,8 @@ namespace Assets.Code.Scripts.UI.Screens
         [SerializeField] public GameObject exitGameButton;
 
         [SerializeField] public GameObject startGameButton;
+
+        [SerializeField] public GameObject gameManager;
 
         // Start is called before the first frame update
         private void Start()
@@ -31,6 +34,7 @@ namespace Assets.Code.Scripts.UI.Screens
         private void ProcessStartGameButtonClick()
         {
             gameObject.SetActive(false);
+            Instantiate(gameManager, null);
         }
 
         private void ProcessExitGameButtonClick()

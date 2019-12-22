@@ -128,7 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ef8c68bade09b41aca258d42a632f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastTab: 0
+  useFixedUpdate: 0
+  lastTab: 2
   movementSettingsFoldout: 1
   zoomingSettingsFoldout: 0
   rotationSettingsFoldout: 1
@@ -136,7 +137,6 @@ MonoBehaviour:
   mapLimitSettingsFoldout: 1
   targetingSettingsFoldout: 1
   inputSettingsFoldout: 1
-  useFixedUpdate: 0
   keyboardMovementSpeed: 5
   screenEdgeMovementSpeed: 3
   followingSpeed: 5
@@ -147,8 +147,8 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 55
-  maxHeight: 15
-  minHeight: 10
+  maxHeight: 200
+  minHeight: 200
   heightDampening: 5
   keyboardZoomingSensitivity: 2
   scrollWheelZoomingSensitivity: 25
