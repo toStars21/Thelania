@@ -1,6 +1,4 @@
-﻿using Assets.Code.Scripts.Units;
-
-namespace Assets.Code.Scripts.Buildings
+﻿namespace Assets.Code.Scripts.Buildings
 {
     public class Barrack : BuildingBase
     {

@@ -5,10 +5,6 @@ namespace Assets.Code.Core.Aspects
 {
     public class CanAttackAspect : ICanAttack
     {
-        public double AttackDistance { get; }
-        public double AttackPower { get; }
-        public TimeSpan AttacksInterval { get; }
-
         public CanAttackAspect(double attackDistance, double attackPower, TimeSpan attacksInterval)
         {
             attackDistance.AssertGreaterThan(0);
@@ -19,5 +15,9 @@ namespace Assets.Code.Core.Aspects
             AttackDistance = attackDistance;
             AttacksInterval = attacksInterval;
         }
+
+        public double AttackDistance { get; }
+        public double AttackPower { get; }
+        public TimeSpan AttacksInterval { get; }
     }
 }

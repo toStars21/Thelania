@@ -7,7 +7,7 @@ namespace Assets.Code.Scripts.Units
     {
         private readonly float _spawnIntervalSeconds;
 
-        private float _nextSpawnTime = 0f;
+        private float _nextSpawnTime;
 
         public GameObject prototype;
 
@@ -17,12 +17,12 @@ namespace Assets.Code.Scripts.Units
             _spawnIntervalSeconds = spawnIntervalSeconds;
         }
 
-        void Start()
+        private void Start()
         {
             _nextSpawnTime = Time.time;
         }
 
-        void Update()
+        private void Update()
         {
             if (Time.time > _nextSpawnTime)
             {

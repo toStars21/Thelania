@@ -5,8 +5,7 @@ namespace Assets.Code.Core.Aspects
 {
     public class KillableAspect : IAspect, IKillable
     {
-        private Action _onDestroy;
-        public double HP { get; private set; }
+        private readonly Action _onDestroy;
 
         public KillableAspect(double hp, Action onDestroy)
         {
@@ -16,15 +15,14 @@ namespace Assets.Code.Core.Aspects
             HP = hp;
         }
 
+        public double HP { get; private set; }
+
         public void Damage(double value)
         {
             value.AssertGreaterThan(0);
             HP -= value;
 
-            if (HP <= 0)
-            {
-                _onDestroy();
-            }
+            if (HP <= 0) _onDestroy();
         }
     }
 }

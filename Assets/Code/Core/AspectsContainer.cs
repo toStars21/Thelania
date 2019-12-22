@@ -6,14 +6,16 @@ namespace Assets.Code.Core
 {
     public class AspectsContainer
     {
-        private IDictionary<Type, IAspect> _aspects = new Dictionary<Type, IAspect>();
+        private readonly IDictionary<Type, IAspect> _aspects = new Dictionary<Type, IAspect>();
+
+        public IReadOnlyCollection<IAspect> Aspects => _aspects.Values.ToList();
 
         public TAspect Get<TAspect>() where TAspect : IAspect
         {
             if (!_aspects.TryGetValue(typeof(TAspect), out var aspect))
                 throw new KeyNotFoundException($"{typeof(TAspect)}");
 
-            return (TAspect)aspect;
+            return (TAspect) aspect;
         }
 
         public void Add<TAspect>(IAspect aspect) where TAspect : IAspect
@@ -28,7 +30,5 @@ namespace Assets.Code.Core
         {
             _aspects.Remove(typeof(TAspect));
         }
-
-        public IReadOnlyCollection<IAspect> Aspects => _aspects.Values.ToList();
     }
 }
