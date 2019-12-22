@@ -55,7 +55,7 @@ namespace Assets.Code.Scripts.Camera
         }
     }
 
-    public class ColoredBlock : System.IDisposable
+    public class ColoredBlock : IDisposable
     {
         public ColoredBlock(Color color)
         {
@@ -71,9 +71,9 @@ namespace Assets.Code.Scripts.Camera
     [Serializable]
     public class TabsBlock
     {
-        private  Dictionary<string, Action> methods;
-        private Action currentGuiMethod;
         public int curMethodIndex = -1;
+        private Action currentGuiMethod;
+        private Dictionary<string, Action> methods;
 
         public TabsBlock(Dictionary<string, Action> _methods)
         {
@@ -88,14 +88,18 @@ namespace Assets.Code.Scripts.Camera
             {
                 using (new HorizontalBlock())
                 {
-                    for (int i = 0; i < keys.Length; i++)
+                    for (var i = 0; i < keys.Length; i++)
                     {
-                        var btnStyle = i == 0 ? EditorStyles.miniButtonLeft : i == (keys.Length - 1) ? EditorStyles.miniButtonRight : EditorStyles.miniButtonMid;
+                        var btnStyle = i == 0 ? EditorStyles.miniButtonLeft :
+                            i == keys.Length - 1 ? EditorStyles.miniButtonRight : EditorStyles.miniButtonMid;
                         using (new ColoredBlock(currentGuiMethod == methods[keys[i]] ? Color.grey : Color.white))
+                        {
                             if (GUILayout.Button(keys[i], btnStyle))
                                 SetCurrentMethod(i);
+                        }
                     }
                 }
+
                 GUILayout.Label(keys[curMethodIndex], EditorStyles.centeredGreyMiniLabel);
                 currentGuiMethod();
             }

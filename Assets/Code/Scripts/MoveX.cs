@@ -6,7 +6,7 @@ namespace Assets.Code.Scripts
     {
         public Transform transform;
 
-        void Update()
+        private void Update()
         {
             transform.position = new Vector3(transform.position.x - 5, transform.position.y, transform.position.z);
         }

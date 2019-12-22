@@ -3,7 +3,7 @@
 namespace Assets.Code.Scripts.Camera
 {
     [RequireComponent(typeof(RTS_Camera))]
-    public class TargetSelector : MonoBehaviour 
+    public class TargetSelector : MonoBehaviour
     {
         private RTS_Camera cam;
         private new UnityEngine.Camera camera;
@@ -17,11 +17,11 @@ namespace Assets.Code.Scripts.Camera
 
         private void Update()
         {
-            if(Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
             {
-                Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+                var ray = camera.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
-                if(Physics.Raycast(ray, out hit))
+                if (Physics.Raycast(ray, out hit))
                 {
                     if (hit.transform.CompareTag(targetsTag))
                         cam.SetTarget(hit.transform);
