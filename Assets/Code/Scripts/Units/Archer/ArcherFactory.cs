@@ -2,7 +2,7 @@
 {
     public class ArcherFactory : UnitFactoryBase
     {
-        public ArcherFactory() : base(3)
+        public ArcherFactory() : base(3000000)
         {
         }
     }
