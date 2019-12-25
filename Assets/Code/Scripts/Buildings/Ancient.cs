@@ -1,8 +1,10 @@
-﻿namespace Assets.Code.Scripts.Buildings
+﻿using Assets.Code.Scripts.Core;
+
+namespace Assets.Code.Scripts.Buildings
 {
-    public class Ancient : BuildingBase
+    public class Ancient : EntityBase
     {
-        public Ancient() : base(1000)
+        public Ancient()
         {
         }
     }

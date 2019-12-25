@@ -1,12 +1,8 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Code.Scripts.Core
 {
-    public abstract class EntityBase : MonoBehaviour, IAspectsHolder
+    public abstract class EntityBase : MonoBehaviour
     {
-        protected readonly AspectsContainer Aspects = new AspectsContainer();
-
-        IReadOnlyCollection<IAspect> IAspectsHolder.Aspects => Aspects.Aspects;
     }
 }

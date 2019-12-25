@@ -1,8 +1,10 @@
-﻿namespace Assets.Code.Scripts.Buildings
+﻿using Assets.Code.Scripts.Core;
+
+namespace Assets.Code.Scripts.Buildings
 {
-    public class Barrack : BuildingBase
+    public class Barrack : EntityBase
     {
-        public Barrack() : base(500)
+        public Barrack()
         {
         }
     }
