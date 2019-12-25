@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+﻿using Assets.Code.Scripts.Path;
+using UnityEngine;
 
 public class Trail : MonoBehaviour
 {
-    public Transform[] nodes;
+    public Node[] Nodes { get; private set; }
 
     private void Start()
     {
-        nodes = GetComponentsInChildren<Transform>();
+        Nodes = GetComponentsInChildren<Node>();
     }
 }

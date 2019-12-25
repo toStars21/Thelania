@@ -14,10 +14,10 @@ namespace Assets.Code.Scripts.Path
         public Trail GetNearestTrail(Vector3 pos)
         {
             var currentTrail = trails[0];
-            var currentMinDistance = Vector3.Distance(pos, currentTrail.nodes[0].transform.position);
+            var currentMinDistance = Vector3.Distance(pos, currentTrail.Nodes[0].transform.position);
             foreach (var trail in trails)
             {
-                foreach (var node in trail.nodes)
+                foreach (var node in trail.Nodes)
                 {
                     var checkingDistance = Vector3.Distance(node.transform.position, pos);
                     if (currentMinDistance > checkingDistance)
