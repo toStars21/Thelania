@@ -6,15 +6,15 @@ namespace Assets.Code.Scripts.Game
 {
     internal class GameManager : MonoBehaviour
     {
-        [SerializeField] private GameMap gameMap;
-        [SerializeField] private GameObject village;
+        [SerializeField] private GameMap _gameMapPrefab;
+        [SerializeField] private GameObject _villagePrefab;
 
         private GameMap _currentGameMap;
         private RTS_Camera _camera;
 
         private void Start()
         {
-            _currentGameMap = Instantiate(gameMap, transform);
+            _currentGameMap = Instantiate(_gameMapPrefab, transform);
 
             var cameraGameObject = GameObject.FindWithTag("MainCamera");
             _camera = cameraGameObject.GetComponent<RTS_Camera>();
@@ -31,7 +31,7 @@ namespace Assets.Code.Scripts.Game
         {
             foreach (var spawnPosition in _currentGameMap.villageSpawnPositions)
             {
-                Instantiate(village, spawnPosition.position, spawnPosition.rotation);
+                Instantiate(_villagePrefab, spawnPosition.position, spawnPosition.rotation, _currentGameMap.transform);
             }
         }
 

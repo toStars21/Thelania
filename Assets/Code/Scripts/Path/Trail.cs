@@ -1,12 +1,14 @@
-﻿using Assets.Code.Scripts.Path;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Trail : MonoBehaviour
+namespace Assets.Code.Scripts.Path
 {
-    public Node[] Nodes { get; private set; }
-
-    private void Start()
+    public class Trail : MonoBehaviour
     {
-        Nodes = GetComponentsInChildren<Node>();
+        public Node[] Nodes { get; private set; }
+
+        private void Start()
+        {
+            Nodes = GetComponentsInChildren<Node>();
+        }
     }
 }

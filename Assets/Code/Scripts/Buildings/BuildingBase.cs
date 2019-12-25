@@ -1,6 +1,4 @@
-﻿using Assets.Code.Core;
-using Assets.Code.Core.Aspects;
-using Assets.Code.Scripts.Core;
+﻿using Assets.Code.Scripts.Core;
 
 namespace Assets.Code.Scripts.Buildings
 {

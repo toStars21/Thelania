@@ -1,13 +1,12 @@
-﻿using UnityEngine;
+﻿using Assets.Code.Scripts.Path;
+using UnityEngine;
 using UnityEngine.AI;
 
-namespace Assets.Code.Scripts
+namespace Assets.Code.Scripts.UnitsBehaviors
 {
-    public class MoveX : MonoBehaviour
+    public class BehaviourFollowPath : MonoBehaviour
     {
         [SerializeField] private NavMeshAgent navMeshAgent;
-
-        public int debugVar;
 
         private Trail _currentTrail;
         private int _currentTrailIndex;
@@ -41,7 +40,6 @@ namespace Assets.Code.Scripts
             }
 
             _currentTrailDirection = Mathf.Clamp(nextTrailIndex - _currentTrailIndex, -1, 1);
-            debugVar = _currentTrailDirection;
         }
 
         private void Update()

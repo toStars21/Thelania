@@ -43,5 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a5b0a833bcbfe4ba94112ed16a660a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMap: {fileID: 732271161059332543, guid: ec366ff475d9ec146b4eb51a4d0d7557, type: 3}
-  village: {fileID: 7416099050666019303, guid: 62b9abcb598196045a6d40710315bc59, type: 3}
+  _gameMapPrefab: {fileID: 732271161059332543, guid: ec366ff475d9ec146b4eb51a4d0d7557,
+    type: 3}
+  _villagePrefab: {fileID: 7416099050666019303, guid: 62b9abcb598196045a6d40710315bc59,
+    type: 3}
