@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -46,7 +45,7 @@ public class GameTimeController : MonoBehaviour
             var timePlayingStr = _playingTime.ToString("mm':'ss");
             TimeCounter.text = timePlayingStr;
 
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
     }
 

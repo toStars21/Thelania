@@ -1,11 +1,8 @@
-﻿using Assets.Code.Scripts.Core;
+﻿using UnityEngine;
 
 namespace Assets.Code.Scripts.Units
 {
-    public abstract class UnitBase : EntityBase
+    public abstract class UnitBase : MonoBehaviour
     {
-        protected UnitBase()
-        {
-        }
     }
 }
