@@ -32,9 +32,10 @@ namespace Assets.Code.Scripts.Game
                 Debug.LogError("Failed to find main camera");
                 throw new NullReferenceException();
             }
+
             SetCameraProperties();
             SpawnPlayers();
-            //GameTimeController.Instance.BeginTimer();
+            GameTimeController.Instance.BeginTimer();
         }
 
         private void SpawnPlayers()

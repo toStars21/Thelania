@@ -285,6 +285,8 @@ GameObject:
   - component: {fileID: 5748358274776231738}
   - component: {fileID: 7489395606510431899}
   - component: {fileID: 2569759449929642053}
+  - component: {fileID: 4486712378040863385}
+  - component: {fileID: 1445379593581450159}
   m_Layer: 5
   m_Name: GameTopMenu
   m_TagString: Untagged
@@ -417,6 +419,32 @@ MonoBehaviour:
   surrenderButton: {fileID: 7489395608020671678}
   defeatMenu: {fileID: 1802661122092750743, guid: 47cd886aa43d7aa4bb6d3337be200af6,
     type: 3}
+--- !u!114 &4486712378040863385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7489395606510431898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7c1f80fa0b37064aaa6cf5f91e287ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeCounter: {fileID: 7489395606414237315}
+--- !u!114 &1445379593581450159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7489395606510431898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d1fa1398db008448e975856fb0b20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Money: {fileID: 7489395606964290703}
 --- !u!1 &7489395606838291634
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +636,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.7999878}
+  m_AnchoredPosition: {x: 0, y: 492.69995}
   m_SizeDelta: {x: 800, y: 21}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7489395606958291964

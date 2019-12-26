@@ -23,31 +23,17 @@ public class GameTimeController : MonoBehaviour
         _timerGoing = false;
     }
 
+    void Update()
+    {
+        _elapsedTime += Time.deltaTime;
+        _playingTime = TimeSpan.FromSeconds(_elapsedTime);
+        var timePlayingStr = _playingTime.ToString("mm':'ss");
+        TimeCounter.text = timePlayingStr;
+    }
+
     public void BeginTimer()
     {
         _timerGoing = true;
         _elapsedTime = 0f;
-
-        StartCoroutine(UpdateTimer());
     }
-
-    public void EndTimer()
-    {
-        _timerGoing = false;
-    }
-
-    private IEnumerator UpdateTimer()
-    {
-        while (_timerGoing)
-        {
-            _elapsedTime += Time.deltaTime;
-            _playingTime = TimeSpan.FromSeconds(_elapsedTime);
-            var timePlayingStr = _playingTime.ToString("mm':'ss");
-            TimeCounter.text = timePlayingStr;
-
-            yield return new WaitForEndOfFrame();
-        }
-    }
-
-
 }
