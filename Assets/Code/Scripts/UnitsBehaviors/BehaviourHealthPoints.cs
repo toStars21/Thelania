@@ -1,32 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-using UnityEngine.AI;
+﻿using UnityEngine;
 
 namespace Assets.Code.Scripts.UnitsBehaviors
 {
     public class BehaviourHealthPoints : MonoBehaviour
     {
-        [SerializeField]private int StartingHealth;
+        [SerializeField] private int StartingHealth;
 
-        private bool _isDamaged;
-        private bool _isDead;
-        private int _currentHealth;
-        
+        private Animator _animator;
+
+        public bool IsDead { get; private set; }
+        private int CurrentHealth { get; set; }
+
         private void Awake()
         {
-            _currentHealth = StartingHealth;
+            CurrentHealth = StartingHealth;
+        }
+
+        private void Start()
+        {
+            _animator = GetComponent<Animator>();
         }
         
-        private void TakeDamage(int amount)
+        public void GiveDamage(int amount)
         {
-            _isDamaged = true;
-            _currentHealth -= amount;
+            CurrentHealth -= amount;
             
-            if (_currentHealth <= 0 && !_isDead)
+            if (CurrentHealth <= 0 && !IsDead)
             {
                 Death();
             }
@@ -34,8 +33,8 @@ namespace Assets.Code.Scripts.UnitsBehaviors
 
         private void Death()
         {
-            _isDead = true;
-            //do smthing
+            IsDead = true;
+            _animator.SetTrigger("Death");
         }
     }
 }
