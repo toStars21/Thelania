@@ -1,11 +1,8 @@
-﻿using Assets.Code.Scripts.Core;
+﻿using UnityEngine;
 
 namespace Assets.Code.Scripts.Buildings
 {
-    public class Barrack : EntityBase
+    public class Barrack : MonoBehaviour
     {
-        public Barrack()
-        {
-        }
     }
 }

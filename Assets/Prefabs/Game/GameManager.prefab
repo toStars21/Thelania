@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3072577715409979965
+--- !u!1 &6443618556192687075
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8582355806382367481}
-  - component: {fileID: 4796654620773729147}
+  - component: {fileID: 3173852103966330183}
+  - component: {fileID: 142687840455819794}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8582355806382367481
+--- !u!4 &3173852103966330183
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3072577715409979965}
+  m_GameObject: {fileID: 6443618556192687075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 66.486465, y: -364.32965, z: 27.992088}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4796654620773729147
+--- !u!114 &142687840455819794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3072577715409979965}
+  m_GameObject: {fileID: 6443618556192687075}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63a5b0a833bcbfe4ba94112ed16a660a, type: 3}
@@ -45,5 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameMapPrefab: {fileID: 732271161059332543, guid: ec366ff475d9ec146b4eb51a4d0d7557,
     type: 3}
-  _villagePrefab: {fileID: 7416099050666019303, guid: 62b9abcb598196045a6d40710315bc59,
+  _villagePrefab: {fileID: 4416183530094729014, guid: 62b9abcb598196045a6d40710315bc59,
     type: 3}

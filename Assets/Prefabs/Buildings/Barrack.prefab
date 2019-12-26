@@ -9,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4949505928865040647}
-  - component: {fileID: 1079647216292890483}
-  - component: {fileID: 3923321555891747650}
   - component: {fileID: 3300529676114338124}
+  - component: {fileID: -2792991915322636543}
   m_Layer: 0
   m_Name: Barrack
   m_TagString: Untagged
@@ -34,31 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
---- !u!114 &1079647216292890483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083718254534938229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d893538455b56c94c8272fccbcc6da5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3923321555891747650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083718254534938229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa96765b2ac7b8448109eb239933219, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prototype: {fileID: 1000012738789888, guid: 9dbd4ebf8cd638846be77516fbdfe22a, type: 3}
 --- !u!208 &3300529676114338124
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -75,6 +49,18 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &-2792991915322636543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083718254534938229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d893538455b56c94c8272fccbcc6da5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &2113881786764749971
 BoxCollider:
   m_ObjectHideFlags: 0
