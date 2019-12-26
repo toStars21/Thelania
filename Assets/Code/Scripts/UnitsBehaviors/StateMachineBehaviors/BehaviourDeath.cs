@@ -19,8 +19,7 @@ namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
         // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
         public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            animator.speed = 0;
-            Destroy(animator.gameObject, 3f);
+            animator.enabled = false;
         }
 
         // OnStateMove is called right after Animator.OnAnimatorMove()
