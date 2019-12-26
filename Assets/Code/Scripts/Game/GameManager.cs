@@ -25,7 +25,7 @@ namespace Assets.Code.Scripts.Game
             }
             SetCameraProperties();
             SpawnVillages();
-            GameTimeController.Instance.BeginTimer();
+            //GameTimeController.Instance.BeginTimer();
         }
 
         private void SpawnVillages()
@@ -46,7 +46,7 @@ namespace Assets.Code.Scripts.Game
             var mapSize = GetMapSize();
             _camera.limitX = mapSize.x;
             _camera.limitY = mapSize.z;
-            var newCameraPos = new Vector3(mapSize.x / 2f, mapSize.y, mapSize.z / 2f);
+            var newCameraPos = new Vector3(mapSize.x / 2f, mapSize.y * 2f, mapSize.z / 2f);
             _camera.transform.SetPositionAndRotation(newCameraPos, _camera.transform.rotation);
             var mapDiagonal = Vector3.Distance(mapSize, Vector3.zero);
             _camera.keyboardMovementSpeed = mapDiagonal / 4f;
@@ -55,7 +55,7 @@ namespace Assets.Code.Scripts.Game
             _camera.panningSpeed = mapDiagonal / 4f;
             _camera.screenEdgeMovementSpeed = mapDiagonal / 2f;
             _camera.minHeight = mapSize.y;
-            _camera.maxHeight = mapSize.y * 2f;
+            _camera.maxHeight = mapSize.y * 4f;
         }
 
         private Vector3 GetMapSize()

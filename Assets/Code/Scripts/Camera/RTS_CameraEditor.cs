@@ -133,7 +133,6 @@ namespace Assets.Code.Scripts.Camera
             if (camera.autoHeight)
             {
                 camera.heightDampening = EditorGUILayout.FloatField("Height dampening: ", camera.heightDampening);
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("groundMask"));
             }
 
             using (new HorizontalBlock())

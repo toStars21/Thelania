@@ -41,7 +41,6 @@ namespace Assets.Code.Scripts.Camera
         #region Height
 
         public bool autoHeight = true;
-        public LayerMask groundMask = -1; //layermask of ground or other objects that affect height
 
         public float maxHeight = 10f; //maximal height
         public float minHeight = 15f; //minimnal height
@@ -238,7 +237,7 @@ namespace Assets.Code.Scripts.Camera
         {
             var distanceToGround = DistanceToGround();
             if (useScrollwheelZooming)
-                zoomPos += ScrollWheel * Time.deltaTime * scrollWheelZoomingSensitivity;
+                zoomPos += ScrollWheel * -1 * Time.deltaTime * scrollWheelZoomingSensitivity;
             if (useKeyboardZooming)
                 zoomPos += ZoomDirection * Time.deltaTime * keyboardZoomingSensitivity;
 
@@ -315,8 +314,7 @@ namespace Assets.Code.Scripts.Camera
         private float DistanceToGround()
         {
             var ray = new Ray(m_Transform.position, Vector3.down);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, groundMask.value))
+            if (Physics.Raycast(ray, out var hit))
                 return (hit.point - m_Transform.position).magnitude;
 
             return 0f;
