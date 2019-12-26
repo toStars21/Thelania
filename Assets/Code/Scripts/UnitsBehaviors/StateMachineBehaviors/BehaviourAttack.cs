@@ -8,6 +8,7 @@ namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
         private BehaviourSelectedTarget _behaviourSelectedTarget;
         private BehaviourHealthPoints _enemyBehaviourHealthPoints;
         private BehaviourPower _power;
+        private AudioSource _audioSource;
 
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -16,6 +17,7 @@ namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
             _behaviourSelectedTarget = animator.gameObject.GetComponent<BehaviourSelectedTarget>();
             _enemyBehaviourHealthPoints = _behaviourSelectedTarget.SelectedTarget.GetComponent<BehaviourHealthPoints>();
             _power = _behaviourSelectedTarget.SelectedTarget.GetComponent<BehaviourPower>();
+            _audioSource = animator.gameObject.GetComponent<AudioSource>();
         }
 
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -33,6 +35,8 @@ namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
         // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
         public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            _audioSource.pitch = Random.Range(0.8f, 1.2f);
+            _audioSource.Play();
             animator.speed = 1f;
             if (_enemyBehaviourHealthPoints.IsDead || _behaviourSelectedTarget.SelectedTarget == null)
             {
