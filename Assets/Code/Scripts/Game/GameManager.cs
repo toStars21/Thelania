@@ -46,11 +46,7 @@ namespace Assets.Code.Scripts.Game
                 _currentGameMap.spawnPoints[mainPlayerVillageIndex].position,
                 _currentGameMap.spawnPoints[mainPlayerVillageIndex].rotation,
                 _currentGameMap.transform);
-            _mainPlayer.info = new PlayerInfo
-            {
-                money = 1000,
-                name = mainPlayerName
-            };
+            _mainPlayer.info = PlayerInfo.Create(mainPlayerName);
             PlayersManager.MainPlayer = _mainPlayer;
 
             var opponentSpawnPoints = new List<Transform>();
@@ -64,11 +60,9 @@ namespace Assets.Code.Scripts.Game
             {
                 var spawnPoint = opponentSpawnPoints[opponentIndex];
                 var opponent = Instantiate(_playerPrefab, spawnPoint.position, spawnPoint.rotation, _currentGameMap.transform);
-                opponent.info = new PlayerInfo
-                {
-                    money = 1000,
-                    name = $"Player{opponentIndex + 1}"
-                };
+                opponent.info = PlayerInfo.Create($"Player{opponentIndex + 1}" == mainPlayerName
+                    ? "Vitia"
+                    : $"Player{opponentIndex + 1}");
                 PlayersManager.Opponents.Add(opponent);
             }
         }
