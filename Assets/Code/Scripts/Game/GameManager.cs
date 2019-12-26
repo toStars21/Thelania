@@ -1,16 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
+using Assets.Code.Extensions;
 using Assets.Code.Scripts.Camera;
+using Assets.Code.Scripts.Players;
 using UnityEngine;
+using Random = System.Random;
 
 namespace Assets.Code.Scripts.Game
 {
     internal class GameManager : MonoBehaviour
     {
         [SerializeField] private GameMap _gameMapPrefab;
-        [SerializeField] private GameObject _villagePrefab;
+        [SerializeField] private Player _playerPrefab;
 
         private GameMap _currentGameMap;
+        private Player _mainPlayer;
         private RTS_Camera _camera;
+
+        private Random _rand = new Random();
 
         private void Start()
         {
@@ -24,15 +31,33 @@ namespace Assets.Code.Scripts.Game
                 throw new NullReferenceException();
             }
             SetCameraProperties();
-            SpawnVillages();
+            SpawnPlayers();
             GameTimeController.Instance.BeginTimer();
         }
 
-        private void SpawnVillages()
+        private void SpawnPlayers()
         {
-            foreach (var spawnPosition in _currentGameMap.villageSpawnPositions)
+            var mainPlayerVillageIndex = _rand.Next(0, _currentGameMap.spawnPoints.Length);
+
+            _mainPlayer = Instantiate(
+                _playerPrefab,
+                _currentGameMap.spawnPoints[mainPlayerVillageIndex].position,
+                _currentGameMap.spawnPoints[mainPlayerVillageIndex].rotation,
+                _currentGameMap.transform);
+            _mainPlayer.info = PlayersManager.MainPlayer;
+
+            var opponentSpawnPoints = new List<Transform>();
+            for (int spawnPointIndex = 0; spawnPointIndex < _currentGameMap.spawnPoints.Length; spawnPointIndex++)
             {
-                Instantiate(_villagePrefab, spawnPosition.position, spawnPosition.rotation, _currentGameMap.transform);
+                if (spawnPointIndex!=mainPlayerVillageIndex)
+                    opponentSpawnPoints.Add(_currentGameMap.spawnPoints[spawnPointIndex]);
+            }
+
+            for (int opponentIndex = 0; opponentIndex <= PlayersManager.Opponents.Count; opponentIndex++)
+            {
+                var spawnPoint = opponentSpawnPoints[opponentIndex];
+                var opponent = Instantiate(_playerPrefab, spawnPoint.position, spawnPoint.rotation, _currentGameMap.transform);
+                opponent.info = PlayersManager.Opponents[opponentIndex];
             }
         }
 
