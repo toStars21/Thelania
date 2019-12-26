@@ -12,7 +12,11 @@ namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
             navMeshAgent.radius = 0f;
             navMeshAgent.height = 0f;
             navMeshAgent.enabled = false;
-            animator.gameObject.GetComponent<Collider>().enabled = false;
+            var collider = animator.gameObject.GetComponent<Collider>();
+            if (collider != null)
+            {
+                collider.enabled = false;
+            }
         }
 
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

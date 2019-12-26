@@ -306,9 +306,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4000013118905508}
   - component: {fileID: 95000010255060964}
-  - component: {fileID: -7324791491116567642}
-  - component: {fileID: -6348012973023629360}
+  - component: {fileID: -8101971721862038447}
   - component: {fileID: 9007197494092795349}
+  - component: {fileID: 3283767748148465687}
+  - component: {fileID: -1665265764951051841}
   m_Layer: 10
   m_Name: MeleeOrc
   m_TagString: Unit
@@ -351,6 +352,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!195 &-8101971721862038447
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011047019502}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 50
+  m_Acceleration: 3600
+  avoidancePriority: 50
+  m_AngularSpeed: 3600
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &9007197494092795349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +387,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
+--- !u!114 &3283767748148465687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011047019502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed82559f958dc744b27f20f1332eb92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1665265764951051841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011047019502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766d31b12ba0e9e41b207550e97ceada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingHealth: 0
 --- !u!1 &1000011835176596
 GameObject:
   m_ObjectHideFlags: 0
