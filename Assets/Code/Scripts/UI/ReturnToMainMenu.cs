@@ -21,6 +21,6 @@ public class ReturnToMainMenu : MonoBehaviour
     {
         gameObject.SetActive(true);
         Instantiate(screenMainMenu, null);
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 }
