@@ -20,7 +20,7 @@ namespace Assets.Code.Scripts.UI.Screens
 
         [SerializeField] public Dropdown opponentsCount;
 
-        [SerializeField] public GameObject gameManager;
+        [SerializeField] public GameManager gameManager;
 
         // Start is called before the first frame update
         private void Start()
@@ -39,14 +39,9 @@ namespace Assets.Code.Scripts.UI.Screens
         private void ProcessStartGameButtonClick()
         {
             gameObject.SetActive(false);
-            InitializePlayers();
-            Instantiate(gameManager, null);
-        }
-
-        private void InitializePlayers()
-        {
-            PlayersManager.AddMainPlayer(mainPlayerName.text);
-            PlayersManager.InitializeOpponents(opponentsCount.value + 1);
+            var instance = Instantiate(gameManager, null);
+            instance.mainPlayerName = mainPlayerName.text;
+            instance.opponentsCount = opponentsCount.value + 1;
         }
 
         private void ProcessExitGameButtonClick()

@@ -7,7 +7,7 @@ namespace Assets
     public class Surrender : MonoBehaviour
     {
         private Button _surrenderButtonComponent;
-        [SerializeField] private GameObject surrenderButton;
+        [SerializeField]public GameObject surrenderButton;
         public GameObject defeatMenu;
 
         public void Start()
