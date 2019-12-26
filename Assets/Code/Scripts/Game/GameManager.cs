@@ -34,7 +34,7 @@ namespace Assets.Code.Scripts.Game
             }
             SetCameraProperties();
             SpawnPlayers();
-            GameTimeController.Instance.BeginTimer();
+            //GameTimeController.Instance.BeginTimer();
         }
 
         private void SpawnPlayers()

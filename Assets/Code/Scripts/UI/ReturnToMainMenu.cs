@@ -4,9 +4,10 @@ using UnityEngine.UI;
 
 public class ReturnToMainMenu : MonoBehaviour
 {
-    private Button _returnButtonComponent;
-    [SerializeField] public GameObject returnButton;
     public GameObject screenMainMenu;
+    private Button _returnButtonComponent;
+    [SerializeField] private GameObject returnButton;
+    
 
     public void Start()
     {
@@ -20,5 +21,6 @@ public class ReturnToMainMenu : MonoBehaviour
     {
         gameObject.SetActive(true);
         Instantiate(screenMainMenu, null);
+        gameObject.SetActive(false);
     }
 }

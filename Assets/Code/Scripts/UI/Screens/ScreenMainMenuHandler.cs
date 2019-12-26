@@ -12,15 +12,15 @@ namespace Assets.Code.Scripts.UI.Screens
 
         private Button _startButtonComponent;
 
-        [SerializeField] public GameObject exitGameButton;
+        [SerializeField] private GameObject exitGameButton;
 
-        [SerializeField] public GameObject startGameButton;
+        [SerializeField] private GameObject startGameButton;
 
-        [SerializeField] public InputField mainPlayerName;
+        [SerializeField] private InputField mainPlayerName;
 
-        [SerializeField] public Dropdown opponentsCount;
+        [SerializeField] private Dropdown opponentsCount;
 
-        [SerializeField] public GameManager gameManager;
+        [SerializeField] private GameManager gameManager;
 
         // Start is called before the first frame update
         private void Start()
