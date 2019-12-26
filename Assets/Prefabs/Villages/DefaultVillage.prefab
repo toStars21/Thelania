@@ -315,7 +315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnIntervalSeconds: 15
-  prototype: {fileID: 1000012738789888, guid: 9dbd4ebf8cd638846be77516fbdfe22a, type: 3}
+  prototype: {fileID: 8839586623673298373, guid: 9dbd4ebf8cd638846be77516fbdfe22a,
+    type: 3}
 --- !u!1 &2588010157758007141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,7 +1315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnIntervalSeconds: 20
-  prototype: {fileID: 1000012738789888, guid: 9dbd4ebf8cd638846be77516fbdfe22a, type: 3}
+  prototype: {fileID: 9007197494092795349, guid: 2b08b0266e6a17647be46ab1ce2b3d8b,
+    type: 3}
 --- !u!1 &8093298315555604816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,7 +1425,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnIntervalSeconds: 30
-  prototype: {fileID: 1000012738789888, guid: 9dbd4ebf8cd638846be77516fbdfe22a, type: 3}
+  prototype: {fileID: 8839586623673298373, guid: 9dbd4ebf8cd638846be77516fbdfe22a,
+    type: 3}
 --- !u!1 &8640362246054607401
 GameObject:
   m_ObjectHideFlags: 0

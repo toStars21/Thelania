@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Assets.Code.Extensions;
 using Assets.Code.Scripts.Camera;
 using Assets.Code.Scripts.Players;
 using UnityEngine;
@@ -8,7 +7,7 @@ using Random = System.Random;
 
 namespace Assets.Code.Scripts.Game
 {
-    internal class GameManager : MonoBehaviour
+    public class GameManager : MonoBehaviour
     {
         [SerializeField] private GameMap _gameMapPrefab;
         [SerializeField] private Player _playerPrefab;
@@ -16,6 +15,9 @@ namespace Assets.Code.Scripts.Game
         private GameMap _currentGameMap;
         private Player _mainPlayer;
         private RTS_Camera _camera;
+
+        public int opponentsCount;
+        public string mainPlayerName;
 
         private Random _rand = new Random();
 
@@ -44,7 +46,8 @@ namespace Assets.Code.Scripts.Game
                 _currentGameMap.spawnPoints[mainPlayerVillageIndex].position,
                 _currentGameMap.spawnPoints[mainPlayerVillageIndex].rotation,
                 _currentGameMap.transform);
-            _mainPlayer.info = PlayersManager.MainPlayer;
+            _mainPlayer.info = PlayerInfo.Create(mainPlayerName);
+            PlayersManager.MainPlayer = _mainPlayer;
 
             var opponentSpawnPoints = new List<Transform>();
             for (int spawnPointIndex = 0; spawnPointIndex < _currentGameMap.spawnPoints.Length; spawnPointIndex++)
@@ -53,11 +56,14 @@ namespace Assets.Code.Scripts.Game
                     opponentSpawnPoints.Add(_currentGameMap.spawnPoints[spawnPointIndex]);
             }
 
-            for (int opponentIndex = 0; opponentIndex <= PlayersManager.Opponents.Count; opponentIndex++)
+            for (int opponentIndex = 0; opponentIndex < opponentsCount; opponentIndex++)
             {
                 var spawnPoint = opponentSpawnPoints[opponentIndex];
                 var opponent = Instantiate(_playerPrefab, spawnPoint.position, spawnPoint.rotation, _currentGameMap.transform);
-                opponent.info = PlayersManager.Opponents[opponentIndex];
+                opponent.info = PlayerInfo.Create($"Player{opponentIndex + 1}" == mainPlayerName
+                    ? "Vitia"
+                    : $"Player{opponentIndex + 1}");
+                PlayersManager.Opponents.Add(opponent);
             }
         }
 

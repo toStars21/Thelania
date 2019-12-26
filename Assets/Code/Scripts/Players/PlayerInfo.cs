@@ -7,5 +7,14 @@ namespace Assets.Code.Scripts.Players
     {
         public string name;
         public double money;
+
+        public static PlayerInfo Create(string playerName)
+        {
+            return new PlayerInfo
+            {
+                name = playerName,
+                money = 1000
+            };
+        }
     }
 }
