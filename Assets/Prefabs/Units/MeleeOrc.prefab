@@ -306,6 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000013118905508}
   - component: {fileID: 95000010255060964}
+  - component: {fileID: 9007197494092795349}
   m_Layer: 10
   m_Name: MeleeOrc
   m_TagString: Unit
@@ -348,6 +349,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9007197494092795349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011047019502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03d01210d964f404c9b86f35e72f7f4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
 --- !u!1 &1000011835176596
 GameObject:
   m_ObjectHideFlags: 0
