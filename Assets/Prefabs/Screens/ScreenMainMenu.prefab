@@ -1608,7 +1608,7 @@ MonoBehaviour:
   startGameButton: {fileID: 7601842481155742914}
   mainPlayerName: {fileID: 6209724408475021209}
   opponentsCount: {fileID: 1354048013053648526}
-  gameManager: {fileID: 6443618556192687075, guid: 3dbf792561642c648b7beccaa41a422c,
+  gameManager: {fileID: 142687840455819794, guid: 3dbf792561642c648b7beccaa41a422c,
     type: 3}
 --- !u!1 &5652120799686508799
 GameObject:

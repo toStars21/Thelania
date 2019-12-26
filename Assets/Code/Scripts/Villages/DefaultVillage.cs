@@ -6,8 +6,8 @@ namespace Assets.Code.Scripts.Villages
 {
     public class DefaultVillage : MonoBehaviour
     {
-        [SerializeField] private List<Barrack> barracks;
+        public List<Barrack> barracks;
 
-        [SerializeField] private Ancient ancient;
+        public Ancient ancient;
     }
 }

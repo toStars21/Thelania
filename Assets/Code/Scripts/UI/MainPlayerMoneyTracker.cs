@@ -18,7 +18,7 @@ namespace Assets.Code.Scripts.UI
         {
             while (true)
             {
-                string money = PlayersManager.MainPlayer?.money.ToString() ?? "undefined";
+                string money = PlayersManager.MainPlayer?.info?.money.ToString() ?? "undefined";
                 Money.text = money;
 
                 yield return new WaitForEndOfFrame();
