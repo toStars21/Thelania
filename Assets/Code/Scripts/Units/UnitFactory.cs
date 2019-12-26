@@ -8,6 +8,7 @@ namespace Assets.Code.Scripts.Units
     {
         [SerializeField] private float spawnIntervalSeconds;
         [SerializeField] private Unit prototype;
+        [SerializeField] private int mobCount;
 
         private float _nextSpawnTime;
 
@@ -27,10 +28,13 @@ namespace Assets.Code.Scripts.Units
         {
             if (Time.time > _nextSpawnTime)
             {
-                var unit = Instantiate(prototype, transform.position + transform.forward * 25, transform.rotation, transform);
-                unit.owner = _owner;
+                for (int i = 0; i < mobCount; i++)
+                {
+                    var unit = Instantiate(prototype, transform.position + transform.forward * 25, transform.rotation, transform);
+                    unit.owner = _owner;
 
-                _nextSpawnTime += spawnIntervalSeconds;
+                    _nextSpawnTime += spawnIntervalSeconds;
+                }
             }
         }
     }
