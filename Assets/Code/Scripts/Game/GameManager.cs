@@ -25,7 +25,7 @@ namespace Assets.Code.Scripts.Game
             }
             SetCameraProperties();
             SpawnVillages();
-            GameTimeController.Instance.BeginTimer();
+            // GameTimeController.Instance.BeginTimer();
         }
 
         private void SpawnVillages()
