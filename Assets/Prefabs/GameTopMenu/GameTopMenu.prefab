@@ -281,9 +281,9 @@ GameObject:
   - component: {fileID: 7489395606510431894}
   - component: {fileID: 7489395606510431897}
   - component: {fileID: 7489395606510431896}
+  - component: {fileID: 3486306456454639131}
+  - component: {fileID: 5748358274776231738}
   - component: {fileID: 7489395606510431899}
-  - component: {fileID: 1584231893213425600}
-  - component: {fileID: 6532714208180460657}
   - component: {fileID: 2569759449929642053}
   m_Layer: 5
   m_Name: GameTopMenu
@@ -355,6 +355,36 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &3486306456454639131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7489395606510431898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0940cc5c2331b4b46b2cc4b12fbc4bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenMainMenu: {fileID: 4916074046246694803, guid: 72bf9116468e1454baa6f8a41dd1f334,
+    type: 3}
+  returnButton: {fileID: 7489395607709383240}
+--- !u!114 &5748358274776231738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7489395606510431898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d7aaad18d68dd46a820e5b601fa56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surrenderButton: {fileID: 7489395608020671678}
+  defeatMenu: {fileID: 1802661122092750743, guid: 47cd886aa43d7aa4bb6d3337be200af6,
+    type: 3}
 --- !u!114 &7489395606510431899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,34 +402,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1584231893213425600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7489395606510431898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c0d1b3759f01a74694443b426e2f15f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  returnButton: {fileID: 7489395607709383240}
-  screenMainMenu: {fileID: 4916074046246694803, guid: 72bf9116468e1454baa6f8a41dd1f334,
-    type: 3}
---- !u!114 &6532714208180460657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7489395606510431898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bffd23fb4e8f73c4ca44e89fffba8795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeCounter: {fileID: 7489395606414237315}
 --- !u!114 &2569759449929642053
 MonoBehaviour:
   m_ObjectHideFlags: 0
