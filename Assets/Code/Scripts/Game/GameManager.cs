@@ -91,6 +91,8 @@ namespace Assets.Code.Scripts.Game
             _camera.mouseRotationSpeed = mapDiagonal / 4f;
             _camera.panningSpeed = mapDiagonal / 4f;
             _camera.screenEdgeMovementSpeed = mapDiagonal / 2f;
+            _camera.minHeight = mapSize.y;
+            _camera.maxHeight = mapSize.y * 4f;
         }
 
         private Vector3 GetMapSize()

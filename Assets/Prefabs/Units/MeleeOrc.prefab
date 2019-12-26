@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 9007197494092795349}
   m_Layer: 10
   m_Name: MeleeOrc
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -340,7 +340,7 @@ Animator:
   m_GameObject: {fileID: 1000011047019502}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 38cd2c2595e0f0d47b285bbd78efcfda, type: 3}
-  m_Controller: {fileID: 9100000, guid: 52d3eb8c7f489ae4b8aced49c673ac60, type: 2}
+  m_Controller: {fileID: 22100000, guid: 173cc8acaa27e9648b41d9710a909416, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

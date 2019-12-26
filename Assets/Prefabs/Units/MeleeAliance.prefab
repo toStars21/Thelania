@@ -459,12 +459,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011050739714}
   - component: {fileID: 95000010597969102}
-  - component: {fileID: 8879889397927259543}
   - component: {fileID: -7456520234507844311}
   - component: {fileID: 8839586623673298373}
   m_Layer: 9
   m_Name: MeleeAliance
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -495,7 +494,7 @@ Animator:
   m_GameObject: {fileID: 1000012738789888}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2cfba37fab445484d96249beba922637, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2e73e1f15d726af44aed08969c444551, type: 2}
+  m_Controller: {fileID: 22100000, guid: 3238031495907094da0b065b749c943c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -504,19 +503,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8879889397927259543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012738789888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2384f56fba7f41d438da66f633a863e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  navMeshAgent: {fileID: -7456520234507844311}
 --- !u!195 &-7456520234507844311
 NavMeshAgent:
   m_ObjectHideFlags: 0
