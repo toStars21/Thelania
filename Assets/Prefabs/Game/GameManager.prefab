@@ -48,6 +48,10 @@ MonoBehaviour:
     type: 3}
   _playerPrefab: {fileID: 8481550283312074854, guid: 5c59065a449d25e46aba5ef94be56cb5,
     type: 3}
+  _topMenuPrefab: {fileID: 7489395606510431898, guid: 1e09c663d0b0d5a499b1dec72c151310,
+    type: 3}
+  opponentsCount: 0
+  mainPlayerName: 
 --- !u!1001 &5890418953469450639
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -463,6 +463,7 @@ GameObject:
   - component: {fileID: 8839586623673298373}
   - component: {fileID: -7597332578668299763}
   - component: {fileID: -3872803748122218329}
+  - component: {fileID: 1938104255302466358}
   m_Layer: 9
   m_Name: MeleeAliance
   m_TagString: Unit
@@ -540,6 +541,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
+  menu: {fileID: 8281351364836339387, guid: 6131f52fc5ebae0449da35b5b87a4eb4, type: 3}
+  Type: 1
 --- !u!114 &-7597332578668299763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,6 +568,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartingHealth: 0
+--- !u!136 &1938104255302466358
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012738789888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1000012832294112
 GameObject:
   m_ObjectHideFlags: 0
