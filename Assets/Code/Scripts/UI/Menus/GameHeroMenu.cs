@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Assets.Code.Scripts.Units;
+using Assets.Code.Scripts.UnitsBehaviors;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +21,6 @@ namespace Assets.Code.Scripts.UI.Menus
             orc.gameObject.SetActive(false);
             aliance.gameObject.SetActive(false);
             archer.gameObject.SetActive(false);
-            StartCoroutine(TrackUnit());
             switch (unit.Type)
             {
                 case UnitTypes.Aliance:
@@ -33,11 +33,14 @@ namespace Assets.Code.Scripts.UI.Menus
                     archer.gameObject.SetActive(true);
                     break;
             }
+            var health = unit.GetComponent<BehaviourHealthPoints>();
+            hp.text = $"{health.CurrentHealth}/{health.StartingHealth}";
         }
 
-        IEnumerator TrackUnit()
+        void Update()
         {
-            yield return new WaitForEndOfFrame();
+            var health = unit.GetComponent<BehaviourHealthPoints>();
+            hp.text = $"{health.CurrentHealth}/{health.StartingHealth}";
         }
     }
 }

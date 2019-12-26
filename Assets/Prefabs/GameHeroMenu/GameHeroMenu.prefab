@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -42.6, y: -4.6}
-  m_SizeDelta: {x: 37.13, y: 20.3}
+  m_AnchoredPosition: {x: -27.11, y: -4.6}
+  m_SizeDelta: {x: 63.5, y: 20.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3953659137730937126
 CanvasRenderer:
@@ -294,8 +294,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140.6, y: -6}
-  m_SizeDelta: {x: 54.4, y: 30}
+  m_AnchoredPosition: {x: 147.68, y: -6}
+  m_SizeDelta: {x: 66.45, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8901909506165359789
 CanvasRenderer:
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 0}
-  hp: {fileID: 0}
+  hp: {fileID: 7040843797115526277}
   attack: {fileID: 0}
   orc: {fileID: 654340995547718001}
   archer: {fileID: 4628119364871667697}
