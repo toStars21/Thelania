@@ -2,7 +2,7 @@
 
 namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
 {
-    public class BehaviourIdle : StateMachineBehaviour
+    public class BehaviourFindEnemy : StateMachineBehaviour
     {
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
