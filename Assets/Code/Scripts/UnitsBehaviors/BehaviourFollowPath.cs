@@ -11,9 +11,11 @@ namespace Assets.Code.Scripts.UnitsBehaviors
         private Trail _currentTrail;
         private int _currentTrailIndex;
         private int _currentTrailDirection;
+        private Animator _animator;
 
         private void Start()
         {
+            _animator = GetComponent<Animator>();
             var trailHolder = GameObject.Find("GameMap(Clone)").GetComponent<GameMap>().trailHolder;
             _currentTrail = trailHolder.GetNearestTrail(transform.position);
             var currentMinDistance = Vector3.Distance(transform.position, _currentTrail.Nodes[0].transform.position);
@@ -40,6 +42,8 @@ namespace Assets.Code.Scripts.UnitsBehaviors
             }
 
             _currentTrailDirection = Mathf.Clamp(nextTrailIndex - _currentTrailIndex, -1, 1);
+            _animator.SetTrigger("Walk");
+
         }
 
         private void Update()
