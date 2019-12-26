@@ -4,12 +4,12 @@ namespace Assets.Code.Scripts.UnitsBehaviors
 {
     public class BehaviourHealthPoints : MonoBehaviour
     {
-        [SerializeField] private int StartingHealth;
+        [SerializeField] public int StartingHealth;
 
         private Animator _animator;
 
         public bool IsDead { get; private set; }
-        private int CurrentHealth { get; set; }
+        public int CurrentHealth { get; private set; }
 
         private void Awake()
         {
