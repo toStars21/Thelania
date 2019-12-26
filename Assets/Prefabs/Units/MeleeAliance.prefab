@@ -460,6 +460,8 @@ GameObject:
   - component: {fileID: 4000011050739714}
   - component: {fileID: 95000010597969102}
   - component: {fileID: -7456520234507844311}
+  - component: {fileID: -3568517772705985921}
+  - component: {fileID: 215243695216485134}
   m_Layer: 9
   m_Name: MeleeAliance
   m_TagString: Unit
@@ -524,6 +526,31 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-3568517772705985921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012738789888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766d31b12ba0e9e41b207550e97ceada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingHealth: 10
+--- !u!114 &215243695216485134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012738789888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed82559f958dc744b27f20f1332eb92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1000012832294112
 GameObject:
   m_ObjectHideFlags: 0
