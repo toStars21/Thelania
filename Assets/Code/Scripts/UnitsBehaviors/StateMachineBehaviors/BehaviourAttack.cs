@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
 {
@@ -20,6 +21,8 @@ namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
         public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            var clipInfo = animator.GetCurrentAnimatorClipInfo(0).FirstOrDefault(cl => cl.clip.name.Contains("Attack"));
+            animator.speed = (1f * clipInfo.clip.length) / _power.AttackIntervalSeconds;
             if (_behaviourSelectedTarget.SelectedTarget == null || _enemyBehaviourHealthPoints.IsDead)
             {
                 return;
@@ -30,6 +33,7 @@ namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
         // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
         public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            animator.speed = 1f;
             if (_enemyBehaviourHealthPoints.IsDead || _behaviourSelectedTarget.SelectedTarget == null)
             {
                 animator.SetTrigger("Walk");
