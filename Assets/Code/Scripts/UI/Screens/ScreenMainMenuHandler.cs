@@ -1,5 +1,6 @@
 ﻿using System;
 using Assets.Code.Scripts.Game;
+using Assets.Code.Scripts.Players;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,10 @@ namespace Assets.Code.Scripts.UI.Screens
         [SerializeField] public GameObject exitGameButton;
 
         [SerializeField] public GameObject startGameButton;
+
+        [SerializeField] public InputField mainPlayerName;
+
+        [SerializeField] public Dropdown opponentsCount;
 
         [SerializeField] public GameObject gameManager;
 
@@ -34,7 +39,14 @@ namespace Assets.Code.Scripts.UI.Screens
         private void ProcessStartGameButtonClick()
         {
             gameObject.SetActive(false);
+            InitializePlayers();
             Instantiate(gameManager, null);
+        }
+
+        private void InitializePlayers()
+        {
+            PlayersManager.AddMainPlayer(mainPlayerName.text);
+            PlayersManager.InitializeOpponents(opponentsCount.value + 1);
         }
 
         private void ProcessExitGameButtonClick()
