@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Assets.Code.Scripts.UnitsBehaviors;
 
 namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
 {
@@ -7,6 +6,7 @@ namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
     {
         private BehaviourSelectedTarget _behaviourSelectedTarget;
         private BehaviourHealthPoints _enemyBehaviourHealthPoints;
+        private BehaviourPower _power;
 
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -14,6 +14,7 @@ namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
             animator.ResetTrigger("Walk");
             _behaviourSelectedTarget = animator.gameObject.GetComponent<BehaviourSelectedTarget>();
             _enemyBehaviourHealthPoints = _behaviourSelectedTarget.SelectedTarget.GetComponent<BehaviourHealthPoints>();
+            _power = _behaviourSelectedTarget.SelectedTarget.GetComponent<BehaviourPower>();
         }
 
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -36,7 +37,7 @@ namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
                 _behaviourSelectedTarget.SelectedTarget = null;
                 return;
             }
-            _enemyBehaviourHealthPoints.GiveDamage(1);
+            _enemyBehaviourHealthPoints.GiveDamage(_power.AttackPower);
             animator.SetTrigger("Attack");
         }
 

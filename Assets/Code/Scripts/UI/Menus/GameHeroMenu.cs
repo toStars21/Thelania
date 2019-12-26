@@ -16,6 +16,9 @@ namespace Assets.Code.Scripts.UI.Menus
         public Image archer;
         public Image aliance;
 
+        private BehaviourHealthPoints _health;
+        private BehaviourPower _power;
+
         void Start()
         {
             orc.gameObject.SetActive(false);
@@ -33,14 +36,15 @@ namespace Assets.Code.Scripts.UI.Menus
                     archer.gameObject.SetActive(true);
                     break;
             }
-            var health = unit.GetComponent<BehaviourHealthPoints>();
-            hp.text = $"{health.CurrentHealth}/{health.StartingHealth}";
+            _health = unit.GetComponent<BehaviourHealthPoints>();
+            _power = unit.GetComponent<BehaviourPower>();
+            hp.text = $"{_health.CurrentHealth}/{_health.StartingHealth}";
+            attack.text = $"{_power.AttackPower}";
         }
 
         void Update()
         {
-            var health = unit.GetComponent<BehaviourHealthPoints>();
-            hp.text = $"{health.CurrentHealth}/{health.StartingHealth}";
+            hp.text = $"{_health.CurrentHealth}/{_health.StartingHealth}";
         }
     }
 }
