@@ -57,14 +57,14 @@ namespace Assets.Code.Scripts.Camera
 
     public class ColoredBlock : IDisposable
     {
-        public ColoredBlock(Color color)
+        public ColoredBlock(UnityEngine.Color color)
         {
             GUI.color = color;
         }
 
         public void Dispose()
         {
-            GUI.color = Color.white;
+            GUI.color = UnityEngine.Color.white;
         }
     }
 
@@ -92,7 +92,7 @@ namespace Assets.Code.Scripts.Camera
                     {
                         var btnStyle = i == 0 ? EditorStyles.miniButtonLeft :
                             i == keys.Length - 1 ? EditorStyles.miniButtonRight : EditorStyles.miniButtonMid;
-                        using (new ColoredBlock(currentGuiMethod == methods[keys[i]] ? Color.grey : Color.white))
+                        using (new ColoredBlock(currentGuiMethod == methods[keys[i]] ? UnityEngine.Color.grey : UnityEngine.Color.white))
                         {
                             if (GUILayout.Button(keys[i], btnStyle))
                                 SetCurrentMethod(i);

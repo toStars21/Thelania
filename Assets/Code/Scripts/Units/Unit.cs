@@ -10,7 +10,19 @@ namespace Assets.Code.Scripts.Units
         public GameHeroMenu menu;
         public UnitTypes Type;
 
-        void OnMouseDown()
+        private void Start()
+        {
+            var meshRenderComponents = GetComponentsInChildren<MeshRenderer>();
+            foreach (var meshRender in meshRenderComponents)
+            {
+                //meshRender.material.color = owner.color;
+            }
+
+            var skinMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+            skinMeshRenderer.material.color = owner.color;
+        }
+
+        private void OnMouseDown()
         {
             if (MenuManager.CurrentGameHeroMenu != null)
                 Destroy(MenuManager.CurrentGameHeroMenu.gameObject);
