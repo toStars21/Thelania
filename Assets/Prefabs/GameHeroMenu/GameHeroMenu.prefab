@@ -455,7 +455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unit: {fileID: 0}
   hp: {fileID: 7040843797115526277}
-  attack: {fileID: 0}
+  attack: {fileID: 7402172381901822130}
   orc: {fileID: 654340995547718001}
   archer: {fileID: 4628119364871667697}
   aliance: {fileID: 2934075616221233716}

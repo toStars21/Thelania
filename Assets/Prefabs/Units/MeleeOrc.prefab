@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: -1665265764951051841}
   - component: {fileID: -8101971721862038447}
   - component: {fileID: 8380811033885757671}
+  - component: {fileID: 1573443769156521412}
   m_Layer: 10
   m_Name: MeleeOrc
   m_TagString: Unit
@@ -429,6 +430,20 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1573443769156521412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011047019502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caa5345e4db2494494be76433aeb1a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackPower: 3
+  AttackIntervalSeconds: 3
 --- !u!1 &1000011835176596
 GameObject:
   m_ObjectHideFlags: 0
