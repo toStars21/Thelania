@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameMap : MonoBehaviour
 {
-    public Transform[] villageSpawnPositions;
+    public Transform[] spawnPoints;
 
     public TrailHolder trailHolder;
 }
