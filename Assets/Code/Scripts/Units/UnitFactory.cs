@@ -30,7 +30,7 @@ namespace Assets.Code.Scripts.Units
             {
                 for (int i = 0; i < mobCount; i++)
                 {
-                    var unit = Instantiate(prototype, transform.position + transform.forward * 25, transform.rotation, transform);
+                    var unit = Instantiate(prototype, transform.position + transform.forward * 35f, transform.rotation, transform);
                     unit.owner = _owner;
 
                     _nextSpawnTime += spawnIntervalSeconds;

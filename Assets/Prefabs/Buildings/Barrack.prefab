@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4949505928865040647}
   - component: {fileID: 3300529676114338124}
   - component: {fileID: -2792991915322636543}
+  - component: {fileID: -1638352818964937736}
   m_Layer: 0
   m_Name: Barrack
   m_TagString: Untagged
@@ -43,11 +44,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.25, y: 0.5, z: 0.25}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: -0.1}
   m_TimeToStationary: 0.5
 --- !u!114 &-2792991915322636543
 MonoBehaviour:
@@ -61,6 +62,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d893538455b56c94c8272fccbcc6da5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1638352818964937736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083718254534938229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1808b4d484da58e46ae27febb91e2279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnIntervalSeconds: 5
+  prototype: {fileID: 8839586623673298373, guid: 9dbd4ebf8cd638846be77516fbdfe22a,
+    type: 3}
+  mobCount: 3
 --- !u!65 &2113881786764749971
 BoxCollider:
   m_ObjectHideFlags: 0

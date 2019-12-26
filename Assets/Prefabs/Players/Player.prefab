@@ -44,7 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ddd23b0917fa8f4da01b2ef29c39128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  info:
+    name: 
+    money: 0
   village: {fileID: 1233311937813524275}
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &3194447594313332741
 PrefabInstance:
   m_ObjectHideFlags: 0

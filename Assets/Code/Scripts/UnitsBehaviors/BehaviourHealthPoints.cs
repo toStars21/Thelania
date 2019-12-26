@@ -24,7 +24,10 @@ namespace Assets.Code.Scripts.UnitsBehaviors
         public void GiveDamage(int amount)
         {
             CurrentHealth -= amount;
-            
+        }
+
+        public void Update()
+        {
             if (CurrentHealth <= 0 && !IsDead)
             {
                 Death();

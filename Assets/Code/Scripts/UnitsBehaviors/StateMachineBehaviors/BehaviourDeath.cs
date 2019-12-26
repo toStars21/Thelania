@@ -8,6 +8,8 @@ namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            animator.ResetTrigger("Attack");
+            animator.ResetTrigger("Walk");
             var navMeshAgent = animator.gameObject.GetComponent<NavMeshAgent>();
             navMeshAgent.radius = 0f;
             navMeshAgent.height = 0f;

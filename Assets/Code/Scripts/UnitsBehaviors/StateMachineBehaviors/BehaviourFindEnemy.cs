@@ -7,6 +7,7 @@ namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
     public class BehaviourFindEnemy : StateMachineBehaviour
     {
         private BehaviourSelectedTarget _behaviourSelectedTarget;
+        private BehaviourHealthPoints _behaviourHealthPoints;
         private Unit _unit;
         private float _lastCheckTime;
         private const float _checkInterval = 0.5f;
@@ -18,11 +19,14 @@ namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
             _behaviourSelectedTarget = animator.gameObject.GetComponent<BehaviourSelectedTarget>();
             _behaviourSelectedTarget.SelectedTarget = null;
             _unit = animator.gameObject.GetComponent<Unit>();
+            _behaviourHealthPoints = animator.gameObject.GetComponent<BehaviourHealthPoints>();
         }
 
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
         public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            if (_behaviourHealthPoints.IsDead)
+                animator.ResetTrigger("Walk");
             var currentTime = Time.time;
             if (currentTime - _lastCheckTime >= _checkInterval)
             {
@@ -37,7 +41,7 @@ namespace Assets.Code.Scripts.UnitsBehaviors.StateMachineBehaviors
                     var unitComponent = unit.GetComponent<Unit>();
                     if (unitComponent == null || unitComponent.owner == _unit.owner)
                         continue;
-                    if (Vector3.Distance(unit.transform.position, animator.transform.position) <= 25f)
+                    if (Vector3.Distance(unit.transform.position, animator.transform.position) <= 35f)
                     {
                         if (unit.gameObject == animator.gameObject)
                             continue;
